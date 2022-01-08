@@ -29,8 +29,7 @@ pipeline {
                 sh "mvn test"
             }
        }
-       
-       }
+  
        stage("Clean And Packaging")
        {
             steps {
