@@ -29,10 +29,7 @@ pipeline {
                 sh "mvn test"
             }
        }
-       stage("Static test") {
-            steps {
-                sh "mvn sonar:sonar -Dsonar.projectKey=timesheet -Dsonar.host.url=http://localhost:9000 -Dsonar.login=e8fcaa690d01b026be481583d8533b3973203125"
-            }
+       
        }
        stage("Clean And Packaging")
        {
