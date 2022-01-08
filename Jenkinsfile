@@ -1,4 +1,9 @@
 pipeline {
+      tools {
+        maven "maven"
+       
+    }
+    
     environment {
     registry = "raddane90/timesheet"
     registryCredential = 'dockerHub'
