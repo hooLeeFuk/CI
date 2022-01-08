@@ -36,11 +36,7 @@ pipeline {
                 sh "mvn clean package"
             }
        }
-       stage("Deploy With Nexus") {
-            steps {
-                sh "mvn clean package deploy:deploy-file -DgroupId=tn.spring -DartifactId=timesheet -Dversion=1.0 -DgeneratePom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://localhost:8081/repository/maven-releases/ -Dfile=target/timesheet-1.0.war"
-            }
-       }
+      
        stage('Building our image') {
             steps{
                  script {
